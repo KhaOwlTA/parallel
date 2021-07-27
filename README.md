@@ -2,6 +2,12 @@
 This is the source code for a report on the final of parallel distributed processing, created in the JupyterLab analytics environment of **VSCode** + **Docker** + **Remote Container**.
 
 ## Usage
+0. if you don't install **VSCode** or **Docker**, you can do it on mac with the following command.
+```bash
+brew install visual-studio-code --cask
+brew install --cask docker
+```
+
 1. Clone this repository.
 ```bash
 git clone https://github.com/KhaOwlTA/parallel
