@@ -11,17 +11,19 @@ def syori(_n):
   return s
 
 #シングルプロセス
-namber_list = list(np.arange(1,20))
+namber_list = list(np.arange(1,5))
+single = []
+
 print("シングルプロセスで処理しています...")
 start_1 = time.time()
 
-single = []
 for i in namber_list:
     single.append(syori(i))
 
 end_1 = time.time()
 time_1 = end_1 - start_1
-print(time_1,"秒")
+print(single)
+print(time_1,"秒\n")
 
 
 
@@ -37,7 +39,8 @@ sms_multi = [r for r in ret]
   
 end_2 = time.time()
 time_2 = end_2 - start_2
-print(time_2,"秒")  
+print(sms_multi)
+print(time_2,"秒\n")  
 
 
 #スレッド4
@@ -50,7 +53,8 @@ sms_multi = [r for r in ret]
   
 end_3 = time.time()
 time_3 = end_3 - start_3
-print(time_3,"秒")  
+print(sms_multi)
+print(time_3,"秒\n")  
 
 
 #スレッド8
@@ -63,7 +67,8 @@ sms_multi = [r for r in ret]
   
 end_4 = time.time()
 time_4 = end_4 - start_4
-print(time_4,"秒")  
+print(sms_multi)
+print(time_4,"秒\n")  
 
 
 #スレッド12
@@ -76,7 +81,8 @@ sms_multi = [r for r in ret]
   
 end_5 = time.time()
 time_5 = end_5 - start_5
-print(time_5,"秒")  
+print(sms_multi)
+print(time_5,"秒\n")  
 
 
 #スレッド16
@@ -89,7 +95,8 @@ sms_multi = [r for r in ret]
   
 end_6 = time.time()
 time_6 = end_6 - start_6
-print(time_6,"秒")  
+print(sms_multi)
+print(time_6,"秒\n")  
 
 
 #スレッド24
@@ -102,7 +109,8 @@ sms_multi = [r for r in ret]
   
 end_7 = time.time()
 time_7 = end_7 - start_7
-print(time_7,"秒")  
+print(sms_multi)
+print(time_7,"秒\n")  
 
 
 #スレッド36
@@ -115,7 +123,8 @@ sms_multi = [r for r in ret]
   
 end_8 = time.time()
 time_8 = end_8 - start_8
-print(time_8,"秒")  
+print(sms_multi)
+print(time_8,"秒\n")  
 
 
 #スレッド48
@@ -128,4 +137,19 @@ sms_multi = [r for r in ret]
   
 end_9 = time.time()
 time_9 = end_9 - start_9
-print(time_9,"秒")  
+print(sms_multi)
+print(time_9,"秒\n")  
+
+
+#スレッド96
+print("スレッド数96で処理しています...")
+start_10 = time.time()
+
+with ThreadPoolExecutor(96) as e:
+    ret = e.map(syori, namber_list)
+sms_multi = [r for r in ret]
+  
+end_10 = time.time()
+time_10 = end_10 - start_10
+print(sms_multi)
+print(time_10,"秒\n")  
