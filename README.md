@@ -21,3 +21,7 @@ git clone https://github.com/KhaOwlTA/parallel
 
 5. "No Python interpreter is selected..." popup → select "Python 3.xx 64-bit('base': conda)"
 
+6. Type the following command or run `work/main.ipynb`.
+```terminal
+python3 work/main.py  
+```
