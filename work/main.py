@@ -37,9 +37,9 @@ def func_2(numbers):
     print("==============================")
 
 print("マルチプロセスでの素数判断処理")
-func_1(NUMBER1)
-func_1(NUMBER2)
-func_1(NUMBER3)
+func_2(NUMBER1)
+func_2(NUMBER2)
+func_2(NUMBER3)
 
 print("シングルスレッドでの総和計算")
 
